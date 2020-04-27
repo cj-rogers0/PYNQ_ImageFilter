@@ -1,0 +1,19 @@
+#include <hls_opencv.h>
+#include "filter.hpp"
+#include <iostream>
+
+using namespace std;
+
+int main (int argc, char** argv) {
+	IplImage* src;
+	IplImage* dst;
+	AXI_STREAM src_axi, dst_axi;
+	src = cvLoadImage("image.bmp");
+	dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+	IplImage2AXIvideo(src, src_axi);
+	grey_filter(src_axi, dst_axi,src->height,src->width);
+	AXIvideo2IplImage(dst_axi, dst);
+	cvSaveImage("op.bmp", dst);
+	cvReleaseImage(&src);
+	cvReleaseImage(&dst);
+}
