@@ -4,6 +4,6 @@ https://www.youtube.com/watch?v=Po3KHF0SlIc&list=PLo7bVbJhQ6qzK6ELKCm8H_WEzzcr5Y
 https://www.youtube.com/watch?v=3So1DPe2_4s
 
 
-#Address for parameters:
+# Address for parameters:
 - XGREY_FILTER_CRTLS_ADDR_ROWS_DATA 0x10
 - XGREY_FILTER_CRTLS_ADDR_COLS_DATA 0x18
