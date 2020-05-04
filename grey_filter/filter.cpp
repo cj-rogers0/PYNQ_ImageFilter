@@ -5,8 +5,9 @@ void grey_filter(AXI_STREAM& INPUT_STREAM, AXI_STREAM& OUTPUT_STREAM, int rows, 
 
 #pragma HLS INTERFACE axis port=INPUT_STREAM
 #pragma HLS INTERFACE axis port=OUTPUT_STREAM
-#pragma HLS INTERFACe s_axilite port=rows bundle=CRTLS
-#pragma HLS INTERFACe s_axilite port=cols bundle=CRTLS
+#pragma HLS INTERFACe s_axilite port=rows
+#pragma HLS INTERFACe s_axilite port=cols
+#pragma HLS INTERFACE ap_ctrl_none port=return
 
 RGB_IMAGE  img_0(rows, cols);
 GRAY_IMAGE img_1(rows, cols);
